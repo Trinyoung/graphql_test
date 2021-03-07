@@ -1,4 +1,4 @@
-export class BaseService {
+export class BaseMutationService {
     constructor(model) {
         this.model = model;
     }
@@ -11,10 +11,16 @@ export class BaseService {
     async update (query, condition) {
         return await this.model.findOneAndUpdate(query, condition);
     }
+}
+
+
+export class BaseQueryService {
+    constructor (model) {
+        this.model = model;
+    }
 
     async getList (query) {
         return await this.model.findOneAndUpdate(query);
-        // const model = this.model.find(query);
     }
 
     async getListForPage () {

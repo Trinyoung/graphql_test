@@ -25,7 +25,7 @@ const schema = buildSchema(`
         hasReads: Int
         favoriteNums: Int
     }
-    type Query {
+    type Query aritcle{
         getArticles: [Article]
     }
     input ArticleInput {

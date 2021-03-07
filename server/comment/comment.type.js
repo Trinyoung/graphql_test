@@ -1,9 +1,17 @@
-import {gql} from 'apollo-server-express';
-const commentTypeDef = gql`
-    type Query {
-        
-    }
-`;
+// import {gql} from 'apollo-server-express';
+export const commentTypeDef = `{
+    nilName: String,
+    email: String,
+    favoriteNum: Int,
+    reply: String,
+    parent: String,
+    isTop: Int,
+    createdAt: Int,
+    articleId: String,
+    authorUid: String,
+    createdBy: String,
+    is_deleted: Int
+}`
 // nilName: { type: String },
 // email: { type: String },
 // favoriteNum: { type: Number, default: 0 },

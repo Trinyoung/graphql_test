@@ -1,7 +1,7 @@
-import { BaseService } from "../base/base.service";
+import { BaseMutationService, BaseQueryService } from "../base/base.service";
 import { commentModel } from './comment.model';
 
-export class CommentService extends BaseService{
+export class CommentQueryService extends BaseQueryService {
     constructor () {
         super(commentModel);
     }
@@ -70,5 +70,11 @@ export class CommentService extends BaseService{
             result.push(comment);
         }
         return result;
+    }
+}
+
+export class CommentMutationService extends BaseMutationService {
+    constructor () {
+        super()
     }
 }
